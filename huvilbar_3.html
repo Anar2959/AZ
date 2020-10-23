@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-compaible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title> AZ online library </title>
+
+    <style>
+        body {
+            background-image: url("header_pic1.jpg");
+            font-family: courier;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00e6e6;
+            font-size:50px; 
+        }
+        h2 {
+            text-align: center;
+            color: #00e6e6;
+            font-size: 20px;
+        }
+
+        .menuitem {
+            margin-top: 50px;
+            margin-left: 25px;
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid rgb(204, 255, 255);
+            border-radius: 1px;
+            background-color: darkslategrey;
+            width: 150px;
+            height: 20px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+
+
+        .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+        .searchTerm {
+            width: 100%;
+            border: 3px solid #00e6e6;
+            border-right: none;
+            padding: 5px;
+            height: 20px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            color: #9DBFAF;
+        }
+
+            .searchTerm:focus {
+                color: #00e6e6;
+            }
+
+        .searchButton {
+            width: 40px;
+            height: 36px;
+            border: 1px solid #00e6e6;
+            background: #00e6e6;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /*Resize the wrap to see the search bar change!*/
+        .wrap {
+            width: 700px;
+            position: absolute;
+            top: 500px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .new_things {
+            margin-top: 300px;
+            color: #ffcc00;
+            font-size: 20px; 
+            float: left; 
+
+        }
+
+        hr {
+            width: 1000px; 
+            float: right; 
+        }
+
+        
+        
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <heading>
+            <nav class="title">
+                <h1> ЦАХИМ НОМЫН САН <img src="new_logo4_copy.png" width="200px" height="140px"> </h1>
+                <h2 style="color: #ffcc00"><i>"БИД ГАНЦААРАА БИШ ГЭДЭГЭЭ МЭДЭХИЙН ТУЛД НОМ УНШДАГ"</i></h2>
+            </nav>
+          
+            <nav class="nav">
+                <ul>
+                    <li class="menuitem"><a href="">НҮҮР</a></li>
+                    <li class="menuitem"><a href="">УНШДАГ НОМ</a></li>
+                    <li class="menuitem"><a href="">СОНСДОГ НОМ</a></li>
+                    <li class="menuitem"><a href="">СЭТГҮҮЛ</a></li>
+                    <li class="menuitem"><a href="">САНАЛ ХҮСЭЛТ</a></li>
+                </ul>
+            </nav>
+        </heading>
+            <nav class="wrap">
+                <nav class="search">
+                    <input type="text" class="searchTerm" placeholder="Номын гарчгийг оруулна уу">
+                    <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                    </button>
+                </nav>
+            </nav>
+    </section>
+    <section1>
+        <nav class="new_things">
+            <p>ШИНЭЭР НЭМЭГДСЭН<hr></p>
+        </nav>
+    </section1>
+ 
+</body>
+</html>
+
+
