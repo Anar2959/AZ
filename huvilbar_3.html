@@ -13,6 +13,11 @@
             font-family: courier;
         }
 
+        #page-wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
         h1 {
             text-align: center;
             color: #00e6e6;
@@ -26,7 +31,7 @@
 
         .menuitem {
             margin-top: 50px;
-            margin-left: 25px;
+            margin-left: 10px;
             display: inline-block;
             padding: 10px;
             border: 1px solid rgb(204, 255, 255);
@@ -86,32 +91,99 @@
         }
 
         .new_things {
-            margin-top: 300px;
+            margin-top: 200px;
             color: #ffcc00;
             font-size: 20px; 
             float: left; 
 
         }
 
-        hr {
+        hr .new_things{
             width: 1000px; 
             float: right; 
+            margin-left: initial; 
+        }
+        .new_things img {
+       
+            width: 150px;
+            height: 200px;
         }
 
+        .new_things li {
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 50px;
+        }
+
+        .reading {
         
+            margin: 0;
+            padding: 0;
+        }
+
+            .reading img {
+                display: inline-block;
+                margin-left: 50px; 
+            }
+
+            .reading a{
+                font-size: 12px;
+            }
+            .reading hr {
+                width: 150px; 
+            }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 150%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: #00e6e6;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            position: absolute;
+            right: 200px;
+            border-radius: 3px 0 0 3px;
+        }
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+                color: #ffcc00;
+            }
+
+        .slideshow-container {
+            position: relative;
+            background:;
+        }
+
+        /* Slides */
+        .mySlide {
+           
+            text-align: center;
+        }
+        
+
         
     </style>
 
 </head>
 
-<body>
+<body id="page-wrap">
     <section>
+          
         <heading>
             <nav class="title">
                 <h1> ЦАХИМ НОМЫН САН <img src="new_logo4_copy.png" width="200px" height="140px"> </h1>
                 <h2 style="color: #ffcc00"><i>"БИД ГАНЦААРАА БИШ ГЭДЭГЭЭ МЭДЭХИЙН ТУЛД НОМ УНШДАГ"</i></h2>
             </nav>
-          
+
             <nav class="nav">
                 <ul>
                     <li class="menuitem"><a href="">НҮҮР</a></li>
@@ -122,21 +194,90 @@
                 </ul>
             </nav>
         </heading>
-            <nav class="wrap">
-                <nav class="search">
-                    <input type="text" class="searchTerm" placeholder="Номын гарчгийг оруулна уу">
-                    <button type="submit" class="searchButton">
+        <nav class="wrap">
+            <nav class="search">
+                <input type="text" class="searchTerm" placeholder="Номын гарчгийг оруулна уу">
+                <button type="submit" class="searchButton">
                     <i class="fa fa-search"></i>
-                    </button>
-                </nav>
+                </button>
             </nav>
+        </nav>
     </section>
     <section1>
         <nav class="new_things">
-            <p>ШИНЭЭР НЭМЭГДСЭН<hr></p>
+            <p><b>ШИНЭЭР НЭМЭГДСЭН</b><hr></p>
+            <div class="mySlide">
+                <ul>
+
+                    <li class="reading">
+                        <img src="nom_1.jpg">
+                        <hr />
+                        <a href="">
+                            Дээврийн өрөөн дэхь <br /> миний мөрөөдөл
+
+                        </a>
+                    </li>
+                    <li class="reading">
+                        <img src="nom_2.jpg">
+                        <hr />
+                        <a href="">
+                            Бидний харж чадахгүй
+                            <br />гэрэл гэгээ
+                        </a>
+                    </li>
+                    <li class="reading">
+                        <img src="nom_3.jpg">
+                        <hr />
+                        <a href="">Алхимич <br />-Адал явдалт түүх</a>
+                    </li>
+                    <li class="reading">
+                        <img src="nom_4.jpg">
+                        <hr />
+                        <a href="">Ад үзэгдэх зориг <br /> -Адлерийн сэтгэл судлал </a>
+                    </li>
+                </ul>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+         
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+            </script>
+
         </nav>
     </section1>
- 
+    <section2>
+        <nav class="best">
+
+        </nav>
+    </section2>
+
 </body>
 </html>
 
